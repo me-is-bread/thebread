@@ -6,7 +6,7 @@ var linkHolder = document.getElementById('link-holder');
 var linkBackText = document.getElementById('link-text-back');
 
 var player = document.getElementById('player');
-var status = document.getElementById('status');
+
 
 var contentShift = false;
 
@@ -20,6 +20,8 @@ function videoToPlay () {
 }
 
 function play() {
+    var status = document.getElementById('status');
+    
     if (player.muted == true) {
         player.muted = false;
         status.innerText = 'music_note'
