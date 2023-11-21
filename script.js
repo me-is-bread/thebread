@@ -15,7 +15,7 @@ function videoToPlay () {
         player.src = "./media/Giga(Ready Steady) 720p.mp4";
     }
     else {
-        player.src = "./media/Giga(Ready Steady) 720p.mp4";
+        player.src = "./media/Yukopi.mp4";
     }
 }
 
