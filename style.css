@@ -44,10 +44,13 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    position: fixed;
-    object-fit: contain;
+    object-fit: cover;
     opacity: 0.85;
     z-index: -1;
+}
+
+video:focus {
+    text-decoration: none;
 }
 
 @keyframes fadeBackground {
@@ -67,7 +70,7 @@ video {
     top: 0;
     right: 0;
     display: flex;
-    padding: 60px 10%;
+    padding: 60px 9%;
     font-size: 25px;
     color: #fff;
     mix-blend-mode: difference;
@@ -75,7 +78,7 @@ video {
 
 .content {
     letter-spacing: 1px;
-    padding: 0 10%;
+    padding: 0 9%;
     color: #fff;
     mix-blend-mode: difference;
     font-size: 12px;
@@ -88,7 +91,7 @@ video {
 .music-btn-holder {
     position: fixed;
     margin-left: 74%;
-    margin-top: -3%;
+    margin-top: -2%;
 }
 
 .right-content-holder {
