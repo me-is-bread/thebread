@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url("./fonts/eng font/PatuaOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'NotoSansJP';
+    src: url("./fonts/jp font/NotoSansJP-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    cursor: url('./media/cursor-resize.png'), pointer;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    animation-name: fadeBackground;
+    animation-duration: 5s;
+}   
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    cursor: url('./media/cursor-resize.png'), pointer;
+}
+
+h1 {
+    margin-top: 8px;
+    font-size: 30px;
+    color: #fff;
+    mix-blend-mode: overlay;
+}
+
+video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    opacity: 0.85;
+    z-index: -1;
+}
+
+@keyframes fadeBackground {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.vid-bg {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-header {
+    letter-spacing: 3px;
+    top: 0;
+    right: 0;
+    display: flex;
+    padding: 60px 10%;
+    font-size: 25px;
+    color: #fff;
+    mix-blend-mode: difference;
+}
+
+.content {
+    letter-spacing: 1px;
+    padding: 0 10%;
+    color: #fff;
+    mix-blend-mode: difference;
+    font-size: 12px;
+}
+
+.content .blk-text {
+    color: #000;
+}
+
+.music-btn-holder {
+    position: fixed;
+    margin-left: 74%;
+    margin-top: -3%;
+}
+
+.right-content-holder {
+    margin-top: 10%;
+    color: #fff;
+    mix-blend-mode: difference;
+    align-items: center;
+    display: flexbox;
+    float: right; 
+    padding: 5% 3%;
+}
+
+.left-content-holder {
+    color: #fff;
+    mix-blend-mode: difference;
+    align-items: center;
+    display: flexbox;
+    float: left; 
+    padding: 7% 4.5%;
+}
+
+.link-text-holder {
+    font-weight: lighter;
+    align-items: center;
+    font-size: 12px;
+}
+
+.link-text {
+    font-size: 12px;
+    padding: 10px 10px;
+    writing-mode: vertical-lr;
+}
+
+.button-semi-rectangle {
+    font-size: 18px;
+    padding: 15px;
+    background-color: transparent;
+    display: block;
+    border: none;
+    margin-bottom: 10px;
+    color: #fff;
+    mix-blend-mode: difference;
+}
+
+.button-circle {
+    font-size: 15px;
+    padding: 10px;
+    background-color: transparent;
+    display: block;
+    border: none;
+    margin-bottom: 20px; 
+    color: #fff;
+    mix-blend-mode: difference;
+}
+
+@media only screen and (min-width: 768px){
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 16px;
+        color: #fff;
+        cursor: url('./media/cursor-resize.png');
+    }
+
+    body {
+        overflow: hidden;
+        margin: 0;
+        animation-name: fadeBackground;
+        animation-duration: 5s;
+    }   
+
+    a, a:hover, a:focus, a:active {
+        text-decoration: none;
+        cursor: url('./media/cursor-resize.png'), pointer;
+    }
+
+    h1 {
+        margin-top: 8px;
+        font-size: 60px;
+        color: #fff;
+        mix-blend-mode: overlay;
+    }
+
+    video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        object-fit: cover;
+        opacity: 0.85;
+        z-index: -1;
+    }
+
+    @keyframes fadeBackground {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    .vid-bg {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .main-header {
+        letter-spacing: 3px;
+        top: 0;
+        right: 0;
+        display: flex;
+        padding: 35px 5%;
+        font-size: 25px;
+        color: #fff;
+        mix-blend-mode: difference;
+    }
+
+    .content {
+        letter-spacing: 1px;
+        margin-top: 50px;
+        padding: 5px 10%;
+        color: #fff;
+        mix-blend-mode: difference;
+        font-size: 18px;
+    }
+
+    .content .blk-text {
+        color: #000;
+    }
+
+    .music-btn-holder {
+        color: #fff;
+        mix-blend-mode: difference;
+        position: fixed;
+        margin-left: 89%;
+        margin-top: -.5%;
+    }
+
+    .right-content-holder {
+        margin-top: 2%;
+        color: #fff;
+        mix-blend-mode: difference;
+        align-items: center;
+        display: flexbox;
+        float: right; 
+        padding: 5% 3%;
+    }
+
+    .left-content-holder {
+        color: #fff;
+        mix-blend-mode: difference;
+        align-items: center;
+        display: flexbox;
+        float: left; 
+        padding: 7% 4.5%;
+    }
+
+    .link-text-holder {
+        font-weight: lighter;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .link-text {
+        padding: 10px 10px;
+        writing-mode: vertical-lr;
+    }
+
+    .button-semi-rectangle {
+        font-size: 18px;
+        padding: 15px;
+        background-color: transparent;
+        display: block;
+        border: none;
+        margin-bottom: 15px;
+        color: #fff;
+        mix-blend-mode: difference;
+    }
+
+    .button-circle {
+        font-size: 15px;
+        padding: 10px;
+        background-color: transparent;
+        display: block;
+        border: none;
+        margin-bottom: 20px; 
+    }
+} 
