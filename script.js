@@ -57,7 +57,7 @@ function linkCredits () {
         contentShift = true;
         audio_click.play();
         text.innerHTML = "Credits";
-        contentText.innerHTML = 'Yukopi - 強風オールバック (feat.歌愛ユキ) <br/ > Video and song by Yukopi.';
+        contentText.innerHTML = 'Giga - Ready Steady ft. 初音ミク・鏡音リン・鏡音レン【MV】. <br/ > Video and song by Giga.';
         linkHolder.hidden = true;
         linkBackText.hidden = false;
     }
