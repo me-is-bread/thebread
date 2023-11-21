@@ -11,7 +11,7 @@ var status = document.getElementById('status');
 var contentShift = false;
 
 function videoToPlay () {
-    if (window.width > 768) {
+    if (screen.width > 768) {
         player.src = "./media/Giga(Ready Steady) 720p.mp4";
     }
     else {
