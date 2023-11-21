@@ -5,11 +5,21 @@ var contentText = document.getElementById('content-text');
 var linkHolder = document.getElementById('link-holder');
 var linkBackText = document.getElementById('link-text-back');
 
+var player = document.getElementById('player');
+var status = document.getElementById('status');
+
 var contentShift = false;
 
+function videoToPlay () {
+    if (window.width > 768) {
+        player.src = "./media/Giga(Ready Steady) 720p.mp4";
+    }
+    else {
+        player.src = "./media/Yukopi.mp4";
+    }
+}
+
 function play() {
-    var player = document.getElementById('player');
-    var status = document.getElementById('status');
     if (player.muted == true) {
         player.muted = false;
         status.innerText = 'music_note'
