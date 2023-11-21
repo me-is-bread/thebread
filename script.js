@@ -15,13 +15,13 @@ function videoToPlay () {
         player.src = "./media/Giga(Ready Steady) 720p.mp4";
     }
     else {
-        player.src = "./media/Yukopi.mp4";
+        player.src = "./media/Giga(Ready Steady) 720p.mp4";
     }
 }
 
 function play() {
     var status = document.getElementById('status');
-    
+
     if (player.muted == true) {
         player.muted = false;
         status.innerText = 'music_note'
