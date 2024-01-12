@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+        <link href="./style.css" rel="stylesheet" type="text/css" />
+        <title>
+            DashBoard
+        </title>
+    </head>
+    <body>
+    <div class="page">
+        <!-- SideBar -->
+        <div class="sidenav">
+            <div class="img"><img alt="logo" height="40" width="50" src="./assets/0b7351f7b132512ea28fae9d5fff1bde.png" /></div>
+            <div class="logo"><span class="material-symbols-outlined size-30">search</span></div>
+            <ul class="icon-container">
+                <li><span class="material-symbols-outlined size-30 selected">home</span></li>
+                <li><span class="material-symbols-outlined size-30">full_coverage</span></li>
+                <li><span class="material-symbols-outlined size-30">ballot</span></li>
+                <li><span class="material-symbols-outlined size-30">account_circle</span></li>
+            </ul>
+            <li class="icon-notif"><span class="material-symbols-outlined size-30">notifications</span></li>
+            <li class="icon-logout"><span class="material-symbols-outlined size-30">logout</span></li>
+        </div>
+
+        <!-- Left Section Content -->
+        
+        <div class="left-section">
+            <img class="pfp" src="./assets/facebook-profile-picture-affects-chances-of-gettin_gstt.jpg" alt="profile-pic" />
+            <div class="info">
+                <span class="text size-25">Hi Mike,</span>
+                <br />
+                <span class="text size-14">welcome back</span>
+            </div>
+
+            <div class="acc-info">
+                <h3>Today</h3>
+                <div class="info-total">
+                <span class="amt size-30">$19,892</span>
+                <span class="amt-info">Account Balance</span>
+                </div>
+                
+                <div class="info-total-batch">
+                <div class="info-batch">
+                <span class="amt size-20">$4,000</span>
+                <span class="amt-info">Year-to-Date Contributions</span>
+                </div>
+                
+                <div class="info-batch">
+                <span class="amt size-20">$1,892</span>
+                <span class="amt-info">Total Interest</span>
+                </div>
+                </div>
+
+                <button class="selection">I want to </button>
+                
+            </div>
+
+            <div class="recent-transac">
+                <h3>Recent Transactions</h3>
+                <span class="date-transac">2020-08-07</span>
+                <span class="transac-info">Withdrawal Transfer to Bank-XX11</span>
+                <hr />
+
+                <span class="date-transac">2020-07-21</span>
+                <span class="transac-info">Withdrawal Transfer to Bank-XX11</span>
+                <hr />
+
+                <span class="date-transac">2020-07-16</span>
+                <span class="transac-info">Withdrawal Transfer to Bank-XX11</span>
+                <hr />
+            </div>
+        </div>
+
+        <!-- Mid Section Content -->
+        <div class="mid-section">
+            <div class="numeric-data">
+                <span class="colored-text">Retirement Income</span>
+                <span class="text size-25">Starting Year 2056</span>
+
+                <div class="numeric-rows">
+                    <div class="numeric-cols">
+                        <span class="numeric-cols data">$300,000</span>
+                        <span class="numeric-cols desc">My Goal</span>
+                        <hr />
+                    </div>
+                    
+                    <div class="num-cols">
+                    
+                        <div class="numeric-cols">
+                            <span class="numeric-cols data">59%</span>
+                            <span class="numeric-cols desc">Goal Achieved</span>
+                            <hr />
+                        </div>
+                        
+                        <div class="numeric-cols">
+                            <span class="numeric-cols data">$300</span>
+                            <span class="numeric-cols desc">Est. Monthly Income</span>
+                            <hr />
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="graph-data">
+                <span class="text size-20">Contributions Overtime</span>
+                <canvas class="canva"id="myChart" style="margin-top: 10px;"></canvas>
+            </div>
+
+            <div class="analytic-data">
+                <span class="text size-20" style="margin-bottom: 10px; display: block;">How do I compare my peers?</span>
+
+                <span class="text size-14" style="margin-bottom: 20px; display: block;">These numbers represent current goal achievement.</span>
+                
+                <div class="analytic-cols">
+                    <div class="col-1">
+                        <div class="a-row">
+                            <span class="text size-14">Age: </span>
+                            <select name="age" id="age" style="margin-left: 40px;">
+                                <option value="under-30">Under 30</option>
+                                <option value="above-30">Above 30</option>
+                            </select>
+                        </div>
+
+                        <div class="a-row">
+                            <span class="text size-14">Salary: </span>
+                            <select name="salary" id="salary" style="margin-left: 25px;">
+                                <option value="under-30k">Under 30K</option>
+                                <option value="above-30k">Above 30K</option>
+                            </select>
+                        </div>
+
+                        <div class="a-row">
+                            <span class="text size-14">Gender: </span>
+                            <select name="gender" id="gender" style="margin-left: 20px;">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-2">
+                        <div class="p-row">
+                            <div class="progress" style="background: radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(rgb(93, 93, 255) 78%, rgb(216, 221, 255) 0);">
+                                <div class="progress-text">78%</div>
+                            </div>
+                            <center><span class="text size-14">Average</span></center>
+                        </div>
+
+                        <div class="p-row">
+                            <div class="progress" style="background: radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(rgb(93, 93, 255) 95%, rgb(216, 221, 255) 0);">
+                                <div class="progress-text">95%</div>
+                            </div>
+                            <center><span class="text size-14">Top</span></center>
+                            
+                        </div>
+
+                        <div class="p-row">
+                            <div class="progress" style="background: radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(rgb(93, 93, 255) 59%, rgb(216, 221, 255) 0);">
+                                <div class="progress-text">59%</div>
+                            </div>
+                            <center><span class="text size-14">Me</span></center>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Section Content -->
+        <div class="end-section">
+            <span class="text size-25">Retirement Strategy</span>
+            <div class="retire-strategy" style="margin-top: 20px;">
+
+                <span class="text size-16" style="display: block; margin-bottom: 15px;">Employee Contribution</span>
+                <div class="e-col">
+                    <input type="range" min="1" max="100" value="12" class="slider" onchange="changeValueOne();" id="slider-1" />
+                    <span class="text size-16" id="slider-1-value">12%</span>
+                </div>
+
+                <span class="text size-16" style="display: block; margin-bottom: 15px;">Retirement Age</span>
+                <div class="e-col">
+                    <input type="range" min="1" max="100" value="65" class="slider" onchange="changeValueTwo();" id="slider-2" />
+                    <span class="text size-16" id="slider-2-value">65</span>
+                </div>
+
+                <hr/>
+
+                <div class="e-row">
+                    <span class="text size-16 row-1">Employer Contribution</span>
+                    <span class="text size-16">8.4%</span>
+                </div>
+
+                <div class="e-row">
+                    <span class="text size-16 row-2">Interest Rate</span>
+                    <span class="text size-16">5%</span>
+                </div>
+
+                <center>
+                    <button class="update">Update</button>
+                    <span class="colored-text size-25">View Help Docs</span>
+                </center>
+
+            </div>
+            <div class="suggestion">
+                <div class="hr-line"></div>
+
+                <div>
+                    <span class="text size-20" style="font-weight:lighter; display: block;">Are you considering a</span>
+                    <span class="text size-20" style="margin-bottom: 10px; display: block;">Housing Advance?</span>
+
+                    <span class="text size-14">Limited time reduced interest</span>
+
+                    <span class="colored-text" style="margin-top: 10px;">Learn More</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
