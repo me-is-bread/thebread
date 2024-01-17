@@ -198,6 +198,7 @@
         object-fit: cover;
         opacity: 0.85;
         z-index: -1;
+        cursor: url('./media/cursor-resize.png');
     }
 
     @keyframes fadeBackground {
@@ -255,6 +256,7 @@
         display: flexbox;
         float: right; 
         padding: 5% 3%;
+        cursor: url('./media/cursor-resize.png');
     }
 
     .left-content-holder {
@@ -264,6 +266,7 @@
         display: flexbox;
         float: left; 
         padding: 7% 4.5%;
+        cursor: url('./media/cursor-resize.png');
     }
 
     .link-text-holder {
