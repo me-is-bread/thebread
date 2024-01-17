@@ -210,6 +210,7 @@
         width: 100%;
         height: 100%;
         position: relative;
+        cursor: url('./media/cursor-resize.png');
     }
 
     .main-header {
@@ -221,6 +222,7 @@
         font-size: 25px;
         color: #fff;
         mix-blend-mode: difference;
+        cursor: url('./media/cursor-resize.png');
     }
 
     .content {
