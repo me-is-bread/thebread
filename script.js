@@ -12,7 +12,7 @@ var contentShift = false;
 
 function videoToPlay () {
     if (screen.width > 768) {
-        player.src = "./media/Giga(Ready Steady) 720p.mp4";
+        player.src = "./media/Giga(Ready Steady).mp4";
     }
     else {
         player.src = "./media/Yukopi.mp4";
