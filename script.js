@@ -7,12 +7,30 @@ var linkBackText = document.getElementById('link-text-back');
 
 var player = document.getElementById('player');
 
+var swapBtn = document.getElementById('swapBtn');
 
 var contentShift = false;
+var q = 'GigaVideo';
+
+var sparkleVideo = "./media/Sparkle 1080 No Edit.mp4";
+var GigaVideo = "./media/Giga(Ready Steady).mp4";
+
+function swapVideo() {
+    if (screen.width > 768) {
+        if (q == 'sparkleVideo') {
+            player.src = GigaVideo;
+            q = 'GigaVideo';
+        }
+        else {
+            player.src = sparkleVideo;
+            q = 'sparkleVideo';
+        }
+    }
+}
 
 function videoToPlay () {
     if (screen.width > 768) {
-        player.src = "./media/Giga(Ready Steady).mp4";
+        player.src = GigaVideo;
     }
     else {
         player.src = "./media/Yukopi.mp4";
@@ -45,13 +63,21 @@ function linkAbout () {
 }
 
 function linkCredits () {
+    swapBtn.style.display = "none";
     if (screen.width > 768) {
         contentShift = true;
         audio_click.play();
-        text.innerHTML = "Credits";
-        contentText.innerHTML = 'Giga - Ready Steady ft. 初音ミク・鏡音リン・鏡音レン【MV】. <br/ > Video and song by Giga.';
         linkHolder.hidden = true;
         linkBackText.hidden = false;
+
+        if (q == 'GigaVideo') {
+            text.innerHTML = "Credits";
+            contentText.innerHTML = 'Giga - Ready Steady ft. 初音ミク・鏡音リン・鏡音レン【MV】. <br/ > Video and song by Giga.';
+        }
+        else {
+            text.innerHTML = "Credits";
+            contentText.innerHTML = 'Sparkle Trailer — "Monodrama" | Honkai: Star Rail. <br/ > Video and song by Honkai Star Rail.';
+        }
     }
     else {
         contentShift = true;
@@ -64,6 +90,7 @@ function linkCredits () {
 }
 
 function linkBack () {
+    swapBtn.style.display = "block";
     if (contentShift == true) {
         contentShift = false;
         audio_click.play();

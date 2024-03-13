@@ -265,7 +265,7 @@
         align-items: center;
         display: flexbox;
         float: left; 
-        padding: 7% 4.5%;
+        padding: 2% 4.5%;
         cursor: url('./media/cursor-resize.png');
     }
 
