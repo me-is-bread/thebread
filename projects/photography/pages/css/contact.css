@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+html {
+    font-family: "Julius Sans One", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    background: rgb(9, 9, 9);
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 25px;
+    margin: 0px 50px;
+    color: #fff;
+}
+
+.header-title {
+    margin-right: auto;
+}
+
+header li {
+    display: inline-block;
+    font-size: 16px;
+    list-style: none;
+    margin-right: 32px;
+}
+
+a {
+    text-decoration: none !important;
+    color: #fff;
+    display: block;
+}
+
+.panel {
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    color: #fff;
+}
+
+.side-img {
+    margin-left: 50px;
+    margin-top: -120px;
+    width: 400px; 
+    height: 600px; 
+}
+
+.square {
+    width: 10px;
+    height: 50px;
+    background-color: #fff;
+    margin-right: 20px;
+}
+
+.left-subPanel {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flexbox;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.miniPanel {
+    display: flex;
+}
+
+.right-subPanel {
+    margin-right: 75px;
+    margin-top: 150px;
+    display: flexbox;
+    justify-content: flex-start;
+}
+
+.contactBtn {
+    font-family: 'Julius Sans One', sans-serif;
+    margin-top: 40px;
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 50px;
+    border-radius: 40px;
+    background: linear-gradient(to right, white 50%, rgba(0, 0 ,0 ,0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .25s ease-out;
+}
+
+.contactBtn:hover {
+    background-position: left bottom;
+    color: #000;
+    font-weight: bold;
+}
+
+.formFields {
+    font-family: 'Julius Sans One', sans-serif;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+    background: transparent;
+    padding: 10px 5px;
+    width: 250px;
+}
+
+.formTextarea {
+    font-family: 'Julius Sans One', sans-serif;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+    background: transparent;
+    padding: 10px 5px;
+    width: 250px;
+    resize: none;
+}
+
+.formFields::placeholder, .formTextarea::placeholder {
+    color: #ccc;
+}
+
+.formFields:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 20px;
+        margin: 30px 15px;
+        color: #fff;
+    }
+    
+    .header-title {
+        margin-right: auto;
+    }
+    
+    header li {
+        display: inline-block;
+        font-size: 16px;
+        list-style: none;
+        margin-right: 0px;
+    }
+    
+    a {
+        text-decoration: none !important;
+        color: #fff;
+        display: block;
+    }
+    
+    .panel {
+        width: 100%;
+        margin-top: 5px;
+        display: flexbox;
+        justify-content: flex-start;
+        color: #fff;
+    }
+    
+    .side-img {
+        display: none;
+    }
+    
+    .square {
+        display: none;
+    }
+
+    .left-subPanel {
+        margin-top: 20px;
+        margin-left: 15px;
+        display: flexbox;
+        justify-content: flex-start;
+    }
+    
+    .miniPanel {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    
+    .right-subPanel {
+        position: absolute;
+        top: 420px;
+        left: 30px;
+        width: 85%;
+        display: flexbox;
+        justify-content: flex-start;
+        font-size: 10px;
+    }
+}
