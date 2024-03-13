@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./pages/css/lib.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" crossorigin="anonymous" />
+    
+    <title>RAW STUDIOS</title>
+</head>
+<body>
+    <header>
+        <span class="header-title">RAW STUDIO</span>
+        <nav>
+            <ul>
+                <li><a href="./pages/about.html">about</a></li>
+                <li><a href="./pages/gallery.html">gallery</a></li>
+                <li><a href="./pages/contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="panel">
+        <div class="left-subPanel">
+            <div class="square"></div>
+            <div>
+                <span class="text ex-lg mb-1">Shivam Rudra</span>
+                <span class="text md fade" id="profession">Photographer / Editor / Designer</span>
+                <button class="contactBtn" onclick="window.location.href = 'mailto:shivamrudraphotography@gmail.com';" type="submit">Contact</button>
+            </div>
+        </div>
+        <img class="center-img" alt="shivamRudra" src="./assets/ShivamRudraHD.png" />
+        <div class="right-subPanel">
+            <span class="text md mb-2 bold">Wall of Fame</span>
+            <div id="fameGallery" class="fameGallery"></div>
+        </div>
+    </div>
+
+    <div class="volSection">
+        <button class="vol" onclick="window.location.href = 'https://www.instagram.com/shivam_rudra_photography/';"><i class="fa-brands fa-instagram"></i></a>
+        <button class="vol" onclick="window.location.href = 'https://www.linkedin.com/in/shivam-rudra-74251b28b/';"><i class="fa-brands fa-linkedin"></i></a>
+        <button class="vol"><i class="fa-solid fa-volume-high"></i></button>
+    </div>
+
+<script type="module" src="./script.js"></script>
+</body>
+</html>
