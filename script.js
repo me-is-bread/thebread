@@ -12,7 +12,7 @@ var swapBtn = document.getElementById('swapBtn');
 var contentShift = false;
 var q = 'GigaVideo';
 
-var sparkleVideo = "./media/Sparkle 1080 No Edit.mp4";
+var sparkleVideo = "./media/Sparkle 720 No Edit.mp4";
 var GigaVideo = "./media/Giga(Ready Steady).mp4";
 
 function swapVideo() {
