@@ -1,5 +1,38 @@
-deployment:
-  production:
-    branch: master
-    commands:
-      - surge --project ./path/to/your-project --domain your-project.surge.sh
+version: 2
+jobs:
+  # Sample build task
+  build:
+    docker:
+      - image: circleci/node:7.10
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      # run placeholder test
+      - run: yarn test
+  # Deploy with Surge task
+  deploy:
+    docker:
+      - image: circleci/node:7.10
+    steps:
+      - checkout
+      - run: npm install surge
+      - run: ./node_modules/surge/lib/cli.js --project ./ --domain inconclusive-transport.surge.sh
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+              - build
