@@ -16,6 +16,7 @@ var firebaseConfig = {
     measurementId: env.get('FIREBASE_MEASUREMENT_ID')
 };
 
+console.log(firebaseConfig);
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
