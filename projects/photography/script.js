@@ -4,7 +4,7 @@ import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAPM4zDlVxtzRseFHSg0DF4eOTw_uhuZig",
+    apiKey: ${{ secrets.FIREBASE_APIKEY }},
     authDomain: "shivam-rudra-db.firebaseapp.com",
     projectId: "shivam-rudra-db",
     storageBucket: "shivam-rudra-db.appspot.com",
