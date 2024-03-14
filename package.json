@@ -1,0 +1,24 @@
+{
+  "name": "thebread",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "devDependencies": {
+    "mocha": "2.2.5",
+    "surge": "latest"
+  },
+  "scripts": {
+    "compile": "echo \"Successfully compiled\"",
+    "deploy": "npm run compile && surge --project ./ --domain thebread.surge.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebread10/thebread.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebread10/thebread/issues"
+  },
+  "homepage": "https://github.com/thebread10/thebread#readme"
+}
