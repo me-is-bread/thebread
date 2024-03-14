@@ -1,0 +1,16 @@
+{
+  "name": "thebread",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebread10/thebread.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebread10/thebread/issues"
+  },
+  "homepage": "https://github.com/thebread10/thebread#readme"
+}
