@@ -4,13 +4,13 @@ import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAPM4zDlVxtzRseFHSg0DF4eOTw_uhuZig",
-    authDomain: "shivam-rudra-db.firebaseapp.com",
-    projectId: "shivam-rudra-db",
-    storageBucket: "shivam-rudra-db.appspot.com",
-    messagingSenderId: "43809569874",
-    appId: "1:43809569874:web:764074b3a439f0a08f738b",
-    measurementId: "G-2FR7VFGGT8"
+    apiKey: ${{ secrets.FIREBASE_APIKEY }},
+    authDomain: ${{ secrets.FIREBASE_AUTHDOMAIN }},
+    projectId: ${{ secrets.FIREBASE_PROJECT_ID }},
+    storageBucket: ${{ secrets.FIREBASE_STORAGE_BUCKET }},
+    messagingSenderId: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }},
+    appId: ${{ secrets.FIREBASE_APP_ID }},
+    measurementId: ${{ secrets.FIREBASE_MEASUREMENT_ID }}
 };
 
 const app = initializeApp(firebaseConfig);
