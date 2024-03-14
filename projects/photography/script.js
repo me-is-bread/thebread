@@ -2,17 +2,20 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebas
 import { getFirestore, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
-require('dotenv').config();
+import { Env } from "@humanwhocodes/env";
 
-const firebaseConfig = {
-    apiKey: process.env.FIREBASE_APIKEY,
-    authDomain: process.env.FIREBASE_AUTHDOMAIN,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID,
-    measurementId: process.env.FIREBASE_MEASUREMENT_ID
+var env = new Env();
+
+var firebaseConfig = {
+    apiKey: env.get('FIREBASE_APIKEY'),
+    authDomain: env.get('FIREBASE_AUTHDOMAIN'),
+    projectId: env.get('FIREBASE_PROJECT_ID'),
+    storageBucket: env.get('FIREBASE_STORAGE_BUCKET'),
+    messagingSenderId: env.get('FIREBASE_MESSAGING_SENDER_ID'),
+    appId: env.get('FIREBASE_APP_ID'),
+    measurementId: env.get('FIREBASE_MEASUREMENT_ID')
 };
+
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
