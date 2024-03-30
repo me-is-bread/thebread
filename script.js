@@ -1,3 +1,7 @@
+import { Env } from "https://cdn.skypack.dev/@humanwhocodes/env?min";
+
+var env = new Env();
+
 var audio_click = document.getElementById('click_player');
 var text = document.getElementById('title');
 var contentText = document.getElementById('content-text'); 
@@ -12,8 +16,9 @@ var swapBtn = document.getElementById('swapBtn');
 var contentShift = false;
 var q = 'GigaVideo';
 
-var sparkleVideo = "./media/Sparkle 480 No Edit.mp4";
-var GigaVideo = "./media/Giga(Ready Steady).mp4";
+var sparkleVideo = "https://firebasestorage.googleapis.com/v0/b/shivam-rudra-db.appspot.com/o/thebreadVideoData%2FSparkle%20480%20No%20Edit.mp4?alt=media&token=" + env.get("FIREBASE_SPARKLE_TOKEN");
+var GigaVideo = "https://firebasestorage.googleapis.com/v0/b/shivam-rudra-db.appspot.com/o/thebreadVideoData%2FGiga(Ready%20Steady).mp4?alt=media&token=" + env.get("FIREBASE_GIGA_TOKEN");
+var yukopiVideo = "https://firebasestorage.googleapis.com/v0/b/shivam-rudra-db.appspot.com/o/thebreadVideoData%2FYukopi.mp4?alt=media&token=" + env.get("FIREBASE_YUKOPI_TOKEN");
 
 function swapVideo() {
     if (screen.width > 768) {
@@ -33,7 +38,7 @@ function videoToPlay () {
         player.src = GigaVideo;
     }
     else {
-        player.src = "./media/Yukopi.mp4";
+        player.src = yukopiVideo;
     }
 }
 
