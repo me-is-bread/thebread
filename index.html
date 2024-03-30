@@ -18,7 +18,7 @@
             Me - Sahil Raut
         </title>
     </head>
-    <body onload="videoToPlay();" id="body">
+    <body>
 
         <div class="vid-bg">
             <video id='player' autoplay loop muted></video>
@@ -30,7 +30,7 @@
 
         <header class="main-header" id="page-content">
             <span id="title">Portfolio</span>
-            <div class="music-btn-holder"><a class="button-circle" href="#" onclick="play()"><span id="status" class="material-symbols-outlined">music_off</span></a></div>
+            <div class="music-btn-holder"><a class="button-circle" href="#" id="playAudio"><span id="status" class="material-symbols-outlined">music_off</span></a></div>
         </header>
 
         <div class="content" id="content-text">
@@ -53,15 +53,15 @@
             <a class="button-semi-rectangle" href="https://twitter.com/_dumbbread_"><i class="fa-brands fa-twitter"></i></a>
             <a class="button-semi-rectangle" href="https://www.linkedin.com/in/sahil-raut-6727131b0/"><i class="fa-brands fa-linkedin"></i></a>
             <a class="button-semi-rectangle" href="mailto:sahilraut0098@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-            <a class="button-semi-rectangle" onclick="swapVideo();" id="swapBtn" title="Change Video"><i class="fa-solid fa-arrows-rotate"></i></a>
+            <a class="button-semi-rectangle" id="swapBtn" title="Change Video"><i class="fa-solid fa-arrows-rotate"></i></a>
         </div>
 
         <div class="right-content-holder" id="page-content">
             <div class="link-text-holder" id="link-holder">
-                <div class="link-text" onclick="linkAbout();" hidden="true">ABOUT ME</div>
-                <div class="link-text" onclick="linkCredits();">CREDITS</div>        
+                <div class="link-text" id="linkAbout" hidden="true">ABOUT ME</div>
+                <div class="link-text" id="linkCredits">CREDITS</div>        
             </div>
-            <div class="link-text" id="link-text-back" onclick="linkBack();" hidden="true">BACK</div>
+            <div class="link-text" id="link-text-back" id="linkBack" hidden="true">BACK</div>
         </div>
 
     </body>

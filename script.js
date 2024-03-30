@@ -13,6 +13,12 @@ var player = document.getElementById('player');
 
 var swapBtn = document.getElementById('swapBtn');
 
+var linkAbout = document.getElementById("linkAbout");
+var linkCredits = document.getElementById("linkCredits");
+var linkBack = document.getElementById("linkBack");
+
+var playAudio = document.getElementById("playAudio");
+
 var contentShift = false;
 var q = 'GigaVideo';
 
@@ -20,7 +26,16 @@ var sparkleVideo = "https://firebasestorage.googleapis.com/v0/b/shivam-rudra-db.
 var GigaVideo = "https://firebasestorage.googleapis.com/v0/b/shivam-rudra-db.appspot.com/o/thebreadVideoData%2FGiga(Ready%20Steady).mp4?alt=media&token=" + env.get("FIREBASE_GIGA_TOKEN");
 var yukopiVideo = "https://firebasestorage.googleapis.com/v0/b/shivam-rudra-db.appspot.com/o/thebreadVideoData%2FYukopi.mp4?alt=media&token=" + env.get("FIREBASE_YUKOPI_TOKEN");
 
-function swapVideo() {
+window.onload = function () {
+    if (screen.width > 768) {
+        player.src = GigaVideo;
+    }
+    else {
+        player.src = yukopiVideo;
+    }
+}
+
+swapBtn.onclick = function () {
     if (screen.width > 768) {
         if (q == 'sparkleVideo') {
             player.src = GigaVideo;
@@ -33,16 +48,7 @@ function swapVideo() {
     }
 }
 
-function videoToPlay () {
-    if (screen.width > 768) {
-        player.src = GigaVideo;
-    }
-    else {
-        player.src = yukopiVideo;
-    }
-}
-
-function play() {
+playAudio.onclick = function () {
     var status = document.getElementById('status');
 
     if (player.muted == true) {
@@ -55,11 +61,11 @@ function play() {
     }
 }
 
-body.onclick = function() {
+window.onclick = function() {
     audio_click.play();
 }
 
-function linkAbout () {
+linkAbout.onclick = function () {
     contentShift = true;
     audio_click.play();
     text.innerHTML = "About Me";
@@ -67,7 +73,7 @@ function linkAbout () {
     linkBackText.hidden = false;
 }
 
-function linkCredits () {
+linkCredits.onclick = function () {
     swapBtn.style.display = "none";
     if (screen.width > 768) {
         contentShift = true;
@@ -94,7 +100,7 @@ function linkCredits () {
     }
 }
 
-function linkBack () {
+linkBack.onclick = function () {
     swapBtn.style.display = "block";
     if (contentShift == true) {
         contentShift = false;
