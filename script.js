@@ -100,7 +100,7 @@ linkCredits.onclick = function () {
     }
 }
 
-linkBack.onclick = function () {
+linkBackText.onclick = function () {
     swapBtn.style.display = "block";
     if (contentShift == true) {
         contentShift = false;
