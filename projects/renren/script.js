@@ -5,9 +5,7 @@ var vizInit = function (){
 var audio = document.getElementById("audio");
 var content = document.getElementById("content");
 
-window.onload = function() {
-    play();
-}
+play();
 
 content.onclick = function() {
     if (active == false) {
