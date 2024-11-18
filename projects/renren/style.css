@@ -54,6 +54,14 @@ audio.active{
   margin-left: 10px;
 }
 
-.content {
-  height: 80%;
+@media only screen and (max-width: 768px) {
+  .content {
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    height: 97%;
+  }
 }
