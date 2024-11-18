@@ -51,6 +51,7 @@ audio.active{
 .credits {
   color: #fff;
   font-size: 14px;
+  margin-left: 10px;
 }
 
 .content {
