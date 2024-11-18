@@ -5,8 +5,6 @@ var vizInit = function (){
 var audio = document.getElementById("audio");
 var content = document.getElementById("content");
 
-play();
-
 content.onclick = function() {
     if (active == false) {
         audio.play();
@@ -17,6 +15,9 @@ content.onclick = function() {
         active = false;
     }
 }
+
+
+play();
 
 function play() {
     var context = new AudioContext();
