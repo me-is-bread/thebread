@@ -6,6 +6,7 @@ var audio = document.getElementById("audio");
 var content = document.getElementById("content");
 
 content.onclick = function() {
+    play();
     if (active == false) {
         audio.play();
         active = true;
@@ -15,9 +16,6 @@ content.onclick = function() {
         active = false;
     }
 }
-
-
-play();
 
 function play() {
     var context = new AudioContext();
