@@ -1,17 +1,22 @@
 var noise = new SimplexNoise();
 var active = false;
+var play_active = false;
 var vizInit = function (){
   
 var audio = document.getElementById("audio");
 var content = document.getElementById("content");
 
 content.onclick = function() {
-    play();
-    if (active == false) {
+    if (play_active == false){ 
+        play();
+        play_active = true
+    }
+
+    if (active == false && play_active == true) {
         audio.play();
         active = true;
     }
-    else if(active == true){
+    else if(active == true && play_active == true){
         audio.pause();
         active = false;
     }
