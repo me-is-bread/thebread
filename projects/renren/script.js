@@ -5,7 +5,10 @@ var vizInit = function (){
 var audio = document.getElementById("audio");
 var content = document.getElementById("content");
 
-play();
+document.body.onload = function() {
+    play();
+}
+
 content.onclick = function() {
     if (active == false) {
         audio.play();
