@@ -12,18 +12,6 @@
   color: var(--textColorDark);
 }
 
-html, body{
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
-  background: #000;
-  color: var(--textColor);
-  font-family: 'Saira', sans-serif;
-  position: relative;
-}
-
 *{
   box-sizing: border-box;
   transition: all 0.12s cubic-bezier(0.42, 0.54, 0.22, 1.26);
@@ -50,6 +38,18 @@ audio.active{
 
 /* mobile */
 @media only screen and (max-width: 768px) {
+  html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 80vh;
+    width: 80vw;
+    background: #000;
+    color: var(--textColor);
+    font-family: 'Saira', sans-serif;
+    position: relative;
+  }
+
   .content {
     height: 85%;
   }
@@ -63,6 +63,18 @@ audio.active{
 }
 /* PC */
 @media only screen and (min-width: 768px) {
+  html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    color: var(--textColor);
+    font-family: 'Saira', sans-serif;
+    position: relative;
+  }
+
   .content {
     height: 95%;
   }
