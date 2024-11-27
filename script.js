@@ -36,7 +36,7 @@ window.onload = function () {
 }
 
 swapBtn.onclick = function () {
-    if (screen.width > 768) {
+    if (window.navigator.userAgent.indexOf("Android") == -1) {
         if (q == 'sparkleVideo') {
             player.src = GigaVideo;
             q = 'GigaVideo';
