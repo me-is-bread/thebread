@@ -17,14 +17,6 @@
   transition: all 0.12s cubic-bezier(0.42, 0.54, 0.22, 1.26);
 }
 
-#canvas {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
 audio {
   position: fixed;
   left: 10px;
@@ -42,12 +34,20 @@ audio.active{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    height: 80vh;
-    width: 80vw;
+    height: 100vh;
+    width: 100vw;
     background: #000;
     color: var(--textColor);
     font-family: 'Saira', sans-serif;
     position: relative;
+  }
+
+  #canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 80%;
   }
 
   .content {
@@ -75,6 +75,14 @@ audio.active{
     position: relative;
   }
 
+  #canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
   .content {
     height: 95%;
   }
