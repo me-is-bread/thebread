@@ -51,17 +51,17 @@ audio.active{
 .credits {
   color: #fff;
   font-size: 14px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 @media only screen and (max-width: 768px) {
   .content {
-    height: 80%;
+    height: 85%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .content {
-    height: 97%;
+    height: 95%;
   }
 }
