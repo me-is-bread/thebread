@@ -48,20 +48,28 @@ audio.active{
   bottom: 10px;
 }
 
-.credits {
-  color: #fff;
-  font-size: 14px;
-  margin-left: 20px;
-}
-
+/* mobile */
 @media only screen and (max-width: 768px) {
   .content {
     height: 85%;
   }
-}
 
+  .credits {
+    color: #fff;
+    font-size: 14px;
+    margin-left: 20px;
+    align-self: center;
+  }
+}
+/* PC */
 @media only screen and (min-width: 768px) {
   .content {
     height: 95%;
+  }
+
+  .credits {
+    color: #fff;
+    font-size: 14px;
+    margin-left: 10px;
   }
 }
