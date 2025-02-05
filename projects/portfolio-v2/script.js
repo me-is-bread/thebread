@@ -1,7 +1,23 @@
+var pageCount = 0;
+
 var _blockItem = document.getElementsByName("block-items");
 var _navItem = document.getElementsByName("nav-item");
 const _navItemArray = Array.from(_navItem);
-console.log(_navItemArray);
+console.log(_blockItem.length)
+
+document.body.onclick = function (event) {
+    if (window.navigator.userAgent.indexOf("Android") != -1) {
+        if (pageCount == _blockItem.length - 1) {
+            _blockItem[pageCount].style.display = "none";
+            pageCount = 0;
+            _blockItem[pageCount].style.display = "block";
+            return;
+        }
+        _blockItem[pageCount].style.display = "none";
+        pageCount = pageCount + 1;
+        _blockItem[pageCount].style.display = "block";
+    }
+}
 
 document.body.onload = function() {
     _navItem[0].classList.add("selected");

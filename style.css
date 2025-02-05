@@ -5,6 +5,17 @@
     padding: 0;
 }
 
+@keyframes background {
+	0% {
+		opacity: 0;
+        translate: -50px;
+	}
+	100% {
+		opacity: 1;
+        translate: 0px;
+	}
+}
+
 html {
     overflow: hidden;
     font-family: "DM Sans", sans-serif;
@@ -47,7 +58,7 @@ html {
     color: #000;
     text-decoration: none;
     font-size: 18px;
-    transition: background 0.3s;
+    transition: 0.3s;
     padding: 8px 16px;
     border-radius: 50px;
 }
@@ -75,6 +86,7 @@ html {
 }
 
 .block-text {
+    animation: background .5s;
     font-size: 20px;
     margin-left: 10%;
 }
@@ -115,13 +127,14 @@ video {
     }
 
     .block {
-        padding: 10px 6%;
+        padding: 0px 10%;
         flex-direction: column;
     }
 
     .block-text {
-        font-size: 22px;
-        margin-top: 0px;
+        font-size: 18px;
+        margin-top: -18px;
+        margin-left: -8px; 
     }
 
     .navbar {
