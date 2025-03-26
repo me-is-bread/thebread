@@ -15,6 +15,7 @@ var swapBtn = document.getElementById('swapBtn');
 
 var linkAbout = document.getElementById("linkAbout");
 var linkCredits = document.getElementById("linkCredits");
+var linkProjects = document.getElementById("linkProjects");
 var linkBack = document.getElementById("linkBack");
 
 var playAudio = document.getElementById("playAudio");
@@ -65,6 +66,23 @@ window.onclick = function() {
     audio_click.play();
 }
 
+linkProjects.onclick = function () {
+    contentShift = true;
+    audio_click.play();
+    linkHolder.hidden = true;
+    linkBackText.hidden = false;
+    
+    text.innerHTML = "Projects";
+    contentText.innerHTML = `
+    <div class = "proj-link">
+    - <b>Dashboard (frontend):</b> <a href="https://the.bread.dev/projects/dashboard">the.bread.dev/projects/dashboard</a>. <br />
+    - <b>Audio Visualizer (3.js):</b> <a href="https://the.bread.dev/projects/visualizer">the.bread.dev/projects/visualizer</a>. <br />
+    - <b>Photography Portfolio (frontend):</b> <a href="https://the.bread.dev/projects/photography">the.bread.dev/projects/photography</a>. <br />
+    - <b>Portfolio (frontend):</b> <a href="https://the.bread.dev/projects/portfolio-v1">the.bread.dev/projects/portfolio-v1</a>. <br />
+    - <b>Game-server using Nakama:</b> <a href="https://github.com/me-is-bread/Nakama-Server-Using-Docker">github.com/me-is-bread/Nakama-Server-Using-Docker</a>.
+    </div>`
+}
+
 linkAbout.onclick = function () {
     contentShift = true;
     audio_click.play();
@@ -83,18 +101,27 @@ linkCredits.onclick = function () {
 
         if (q == 'GigaVideo') {
             text.innerHTML = "Credits";
-            contentText.innerHTML = 'Giga - Ready Steady ft. 初音ミク・鏡音リン・鏡音レン【MV】. <br/ > Video and song by Giga.';
+            contentText.innerHTML = `
+            Giga - Ready Steady ft. 初音ミク・鏡音リン・鏡音レン【MV】. 
+            <br/ > 
+            Video and song by Giga.`;
         }
         else {
             text.innerHTML = "Credits";
-            contentText.innerHTML = 'Sparkle Trailer — "Monodrama" | Honkai: Star Rail. <br/ > Video and song by Honkai Star Rail.';
+            contentText.innerHTML = `
+            Sparkle Trailer — "Monodrama" | Honkai: Star Rail.
+            <br/ > 
+            Video and song by Honkai Star Rail.`;
         }
     }
     else {
         contentShift = true;
         audio_click.play();
         text.innerHTML = "Credits";
-        contentText.innerHTML = 'Yukopi - 寝起きヤシの木 (feat.歌愛ユキ) <br/ > Video and song by Yukopi.';
+        contentText.innerHTML = `
+        Yukopi - 寝起きヤシの木 (feat.歌愛ユキ) 
+        <br/ >
+        Video and song by Yukopi.`;
         linkHolder.hidden = true;
         linkBackText.hidden = false;
     }
@@ -106,7 +133,13 @@ linkBackText.onclick = function () {
         contentShift = false;
         audio_click.play();
         text.innerHTML = "Portfolio";
-        contentText.innerHTML = "Hi, my name is, <br /> <h1> Sahil Raut. <br /> I build things for Web. </h1> <br /> I'm a web developer specialized in UI/UX designs. <br /> (with designing software as Figma or Adobe XD and also with HTML, CSS, JS) <br /> I like to produce unique designs in every project.";
+        contentText.innerHTML = `
+        Hi, my name is, 
+        <br /> <h1> Sahil Raut. <br /> 
+        I build things for Web. </h1> <br /> 
+        I'm a web developer specialized in UI/UX designs. <br /> 
+        (with designing software as Figma or Adobe XD and also with HTML, CSS, JS) 
+        <br /> I like to produce unique designs in every project.`;
         linkHolder.hidden = false;
         linkBackText.hidden = true;
     }

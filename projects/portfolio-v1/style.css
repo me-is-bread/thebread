@@ -31,6 +31,15 @@
         cursor: url('./media/cursor-resize.png'), pointer;
     }
 
+    .proj-link {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .proj-link a {
+        text-decoration: underline;
+    }
+
     h1 {
         margin-top: 8px;
         font-size: 30px;
@@ -177,9 +186,20 @@
         cursor: url('./media/cursor-resize.png');
     }   
 
+    .proj-link {
+        font-size: 22px;
+        line-height: 45px;
+    }
+
+    .proj-link a {
+        text-decoration: underline;
+    }
+
     a, a:hover, a:focus, a:active {
+        color: #fff;
         text-decoration: none;
         cursor: url('./media/cursor-resize.png'), pointer;
+        mix-blend-mode: overlay;
     }
 
     h1 {
@@ -228,8 +248,8 @@
 
     .content {
         letter-spacing: 1px;
-        margin-top: 50px;
-        padding: 5px 10%;
+        margin-top: 5px;
+        padding: 5px 15%;
         color: #fff;
         mix-blend-mode: difference;
         font-size: 18px;
@@ -249,7 +269,7 @@
     }
 
     .right-content-holder {
-        margin-top: 2%;
+        margin-top: -3%;
         color: #fff;
         mix-blend-mode: difference;
         align-items: center;
@@ -260,6 +280,7 @@
     }
 
     .left-content-holder {
+        margin-top: -3%;
         color: #fff;
         mix-blend-mode: difference;
         align-items: center;
@@ -272,11 +293,11 @@
     .link-text-holder {
         font-weight: lighter;
         align-items: center;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .link-text {
-        padding: 10px 10px;
+        padding: 17.5px 10px;
         writing-mode: vertical-lr;
     }
 
@@ -286,8 +307,8 @@
         background-color: transparent;
         display: block;
         border: none;
-        margin-bottom: 15px;
         color: #fff;
+        margin-top: 10px;
         mix-blend-mode: difference;
     }
 
