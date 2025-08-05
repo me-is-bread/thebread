@@ -129,7 +129,7 @@
     }
 
     .link-text-holder {
-        font-weight: lighter;
+        font-weight: bold;
         align-items: center;
         font-size: 12px;
     }
@@ -291,7 +291,7 @@
     }
 
     .link-text-holder {
-        font-weight: lighter;
+        font-weight: bold;
         align-items: center;
         font-size: 14px;
     }
