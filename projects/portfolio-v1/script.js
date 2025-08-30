@@ -75,10 +75,10 @@ linkProjects.onclick = function () {
     text.innerHTML = "Projects";
     contentText.innerHTML = `
     <div class = "proj-link">
-    - <b>Dashboard (frontend):</b> <a href="https://the.bread.dev/projects/dashboard">the.bread.dev/projects/dashboard</a>. <br />
-    - <b>Audio Visualizer (3.js):</b> <a href="https://the.bread.dev/projects/visualizer">the.bread.dev/projects/visualizer</a>. <br />
-    - <b>Photography Portfolio (frontend):</b> <a href="https://the.bread.dev/projects/photography">the.bread.dev/projects/photography</a>. <br />
-    - <b>Portfolio (frontend):</b> <a href="https://the.bread.dev/projects/portfolio-v1">the.bread.dev/projects/portfolio-v1</a>. <br />
+    - <b>Dashboard (frontend):</b> <a href="https://thebread.pages.dev/projects/dashboard">thebread.pages.dev/projects/dashboard</a>. <br />
+    - <b>Audio Visualizer (3.js):</b> <a href="https://thebread.pages.dev/projects/visualizer">thebread.pages.dev/projects/visualizer</a>. <br />
+    - <b>Photography Portfolio (frontend):</b> <a href="https://thebread.pages.dev/projects/photography">thebread.pages.dev/projects/photography</a>. <br />
+    - <b>Portfolio (frontend):</b> <a href="https://thebread.pages.dev/projects/portfolio-v1">thebread.pages.dev/projects/portfolio-v1</a>. <br />
     - <b>Game-server using Nakama:</b> <a href="https://github.com/me-is-bread/Nakama-Server-Using-Docker">github.com/me-is-bread/Nakama-Server-Using-Docker</a>.
     </div>`
 }
