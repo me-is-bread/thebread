@@ -33,9 +33,9 @@ audio.active{
   html, body{
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
     background: #000;
     color: var(--textColor);
     font-family: 'Saira', sans-serif;
@@ -50,7 +50,7 @@ audio.active{
     height: 100%;
   }
 
-  .content {
+  .visualizer-content {
     height: 85%;
   }
 
@@ -67,12 +67,13 @@ audio.active{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background: #000;
     color: var(--textColor);
     font-family: 'Saira', sans-serif;
     position: relative;
+    left: 1%;
   }
 
   #canvas {
@@ -83,13 +84,39 @@ audio.active{
     height: 100%;
   }
   
-  .content {
-    height: 95%;
+  .visualizer-content {
+    position: absolute;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .pre-check {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .circle-btn {
+    font-weight: bolder;
+    display: block;
+    border-radius: 20px;
+    border: none;
+    background-color: #fff;
+    padding: 10px 50px;
+    position: absolute;
+    left: 43%;
+    top: 43%;
   }
 
   .credits {
     color: #fff;
-    font-size: 14px;
-    margin-left: 10px;
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    z-index: 1;
   }
 }

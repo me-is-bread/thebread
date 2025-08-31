@@ -4,14 +4,20 @@ var play_active = false;
 var vizInit = function (){
   
 var audio = document.getElementById("audio");
-var content = document.getElementById("content");
+var _preCheckScreen = document.getElementById("pre-check")
+var _powerUp = document.getElementById("power-up");
 
-content.onclick = function() {
+_powerUp.onclick = function() {
     if (play_active == false){ 
         play();
+        audio.play();
+        active = true;
         play_active = true
+        _preCheckScreen.style.display = "none";
     }
+}
 
+window.onclick = function() {
     if (active == false && play_active == true) {
         audio.play();
         active = true;
@@ -72,7 +78,7 @@ function play() {
     
     scene.add(group);
 
-    document.getElementById('out').appendChild(renderer.domElement);
+    document.body.appendChild(renderer.domElement);
 
     window.addEventListener('resize', onWindowResize, false);
 
@@ -129,10 +135,6 @@ function play() {
 window.onload = vizInit();
 
 document.body.addEventListener('touchend', function(ev) { context.resume(); });
-
-
-
-
 
 function fractionate(val, minVal, maxVal) {
     return (val - minVal)/(maxVal - minVal);
