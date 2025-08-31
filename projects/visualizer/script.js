@@ -10,21 +10,27 @@ var _powerUp = document.getElementById("power-up");
 _powerUp.onclick = function() {
     if (play_active == false){ 
         play();
-        audio.play();
-        active = true;
-        play_active = true
+        play_active = true;
         _preCheckScreen.style.display = "none";
     }
+}
+
+audio.onplay = function() {
+    active = true;
+}
+
+audio.onpause = function() {
+    active = false;
 }
 
 window.onclick = function() {
     if (active == false && play_active == true) {
         audio.play();
-        active = true;
+        console.log("playing");
     }
     else if(active == true && play_active == true){
         audio.pause();
-        active = false;
+        console.log("paused");
     }
 }
 
