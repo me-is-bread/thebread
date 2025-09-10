@@ -28,6 +28,30 @@ audio.active{
   bottom: 10px;
 }
 
+.visualizer-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .pre-check {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .circle-btn {
+    font-weight: bolder;
+    display: block;
+    border-radius: 20px;
+    border: none;
+    background-color: #fff;
+    padding: 10px 50px;
+    position: absolute;
+  }
+
 /* mobile */
 @media only screen and (max-width: 768px) {
   html, body{
