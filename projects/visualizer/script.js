@@ -113,7 +113,7 @@ function play() {
     }
     else 
     {
-        camera.position.set(0, 0, 40);
+        camera.position.set(0, 0, 60);
     }
     camera.lookAt(scene.position);
     scene.add(camera);
