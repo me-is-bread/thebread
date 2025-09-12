@@ -4,14 +4,75 @@ var play_active = false;
 var vizInit = function (){
   
 var audio = document.getElementById("audio");
-var _preCheckScreen = document.getElementById("pre-check")
+var _preCheckScreen = document.getElementById("pre-check");
 var _powerUp = document.getElementById("power-up");
+var _postCheckScreen = document.getElementById("post-check");
+
+var introString = `
+    I'm a web developer mostly <br />
+    familiar in UI/UX and HTML, <br />
+    CSS, JS and reactJS for <br />
+    designing web interfaces. <br />
+    Furthermore, brief knowledge <br />
+    of android application designing, <br />
+    worked with android studio <br />
+    and visual studio for mobile <br />
+    and desktop applications <br />
+    respectively. Moreover, worked <br />
+    with Unreal and Unity3D game <br />
+    engines building personal <br />
+    projects and studying level <br />
+    design and game mechanics.
+    `;
+var greetString = "Hi, my name is,";
+var nameString = `
+    <span class="highlight">Sahil Raut.</span> <br />
+    I build things <br />
+    for Web.
+    `;
+
+function typewriterEffect(elementId, textArray, speed = 120, cursorChar = '_') {
+  const targetElement = document.getElementById(elementId);
+  if (!targetElement) {
+    console.error(`Element with ID "${elementId}" not found.`);
+    return;
+  }
+
+  let textIndex = 0;
+  let charIndex = 0;
+
+  function type() {
+    const currentText = textArray[textIndex];
+    let displayText = "";
+    displayText = currentText.substring(0, charIndex + 1);
+    charIndex++;
+    targetElement.innerHTML = displayText;
+    setTimeout(type, speed);
+  }
+
+  type();
+}
 
 _powerUp.onclick = function() {
     if (play_active == false){ 
         play();
-        play_active = true;
+        play_active = true;      
         _preCheckScreen.style.display = "none";
+        _postCheckScreen.style.display = "block";
+        typewriterEffect("typed", ["Portfolio"], 120);
+        typewriterEffect("greetString", [greetString], 120);
+        typewriterEffect("nameString", [nameString], 120);
+        typewriterEffect("introString", [introString], 60);
+        /*new Typed('#typed', {
+            strings: ['Portfolio'],
+            typeSpeed: 60,
+            cursorChar: '_'
+        });
+        new Typed('#typed-content', {
+            strings: "#content-text",
+            typeSpeed: 60,
+            cursorChar: '_'
+        });*/
     }
 }
 
@@ -52,7 +113,7 @@ function play() {
     }
     else 
     {
-        camera.position.set(0,0,100);
+        camera.position.set(10,0,40);
     }
     camera.lookAt(scene.position);
     scene.add(camera);
@@ -84,7 +145,7 @@ function play() {
     
     scene.add(group);
 
-    document.body.appendChild(renderer.domElement);
+    document.getElementById("out").appendChild(renderer.domElement);
 
     window.addEventListener('resize', onWindowResize, false);
 

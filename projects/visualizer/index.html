@@ -4,23 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3.js Visualizer</title>
-  <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet"><link rel="stylesheet" href="./style.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <div class="pre-check" id="pre-check">
     <button class="circle-btn" id="power-up">Power Up!</button>
   </div>
-  <div id="content" class="visualizer-content">
-    <audio src="./audio_file/ellie-goulding-love-me-like-you-do.mp3" id="audio" loop></audio>
-    <div id="out"></div>
+
+  <div class="post-check" id="post-check">
+    <header class="main-header" id="page-content">
+        <span id="typed"></span><span id="cursor">_</span>
+    </header>
+
+    <div class="content" id="content-text">
+        <span id="greetString"></span>
+        <br />
+        <h1 id="header-content">
+            <span id="nameString"></span>
+        </h1>
+        <span id="introString"></span> 
+    </div>
+    <span id="typed-content"><!-- content will be typed here --></span>
+    <div id="content" class="visualizer-content">
+      <audio src="./audio_file/ellie-goulding-love-me-like-you-do.mp3" id="audio" loop></audio>
+      <div id="out"></div>
+    </div>
+    <span class="credits">Song Love Me Like You Do - Ellie Goulding | Note: Click anywhere to start as well as to play/pause.</span>
   </div>
-  <span class="credits">Song Love Me Like You Do - Ellie Goulding | Note: Click anywhere to start as well as to play/pause.</span>
-  
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
   <script src='https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.3/dat.gui.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.3.0/simplex-noise.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   <script  src="./script.js"></script>
 
 </body>

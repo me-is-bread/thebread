@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour:SCAN@-50&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Workbench:SCAN@-50&display=swap');
+
 :root{
   --bgColor : hsla(242, 86%, 6%, 1);
   --bgColorLight : hsla(242, 86%, 24%, 1);
@@ -17,6 +20,19 @@
   transition: all 0.12s cubic-bezier(0.42, 0.54, 0.22, 1.26);
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  color: var(--textColor);
+  font-family: "Sixtyfour", sans-serif;
+  font-style: normal;
+  position: relative;
+}
+
 audio {
   position: fixed;
   left: 10px;
@@ -28,43 +44,61 @@ audio.active{
   bottom: 10px;
 }
 
-.visualizer-content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: none;
-  }
+.circle-btn {
+  font-weight: bolder;
+  display: block;
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+  font-family: "Sixtyfour", sans-serif;
+  padding: 10px 50px;
+}
 
-  .pre-check {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 99;
-  }
+.main-header {
+  letter-spacing: 3px;
+  padding: 20px 2%;
+  font-size: 25px;
+  color: #fff;
+  mix-blend-mode: difference;
+}
 
-  .circle-btn {
-    font-weight: bolder;
-    display: block;
-    border-radius: 20px;
-    border: none;
-    background-color: #fff;
-    padding: 10px 50px;
-    position: absolute;
-  }
+.content {
+  letter-spacing: 1px;
+  line-height: 20px;
+  padding: 30px 2%;
+  color: #fff;
+  mix-blend-mode: difference;
+  font-size: 14px;
+}
+
+.highlight {
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  color: #000;
+  background: #fff;
+}
+
+#cursor {
+  animation: cursor-blink .75s infinite step-end; /*1sec interval indefinite loop */
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  } 
+  50% {
+    opacity: 0;
+  } 
+}
+
+#header-content {
+  line-height: 35px;
+}
 
 /* mobile */
 @media only screen and (max-width: 768px) {
-  html, body{
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    height: 100%;
-    width: 100%;
-    background: #000;
-    color: var(--textColor);
-    font-family: 'Saira', sans-serif;
-    position: relative;
-  }
 
   #canvas {
     position: fixed;
@@ -88,32 +122,23 @@ audio.active{
 /* PC */
 @media only screen and (min-width: 768px) {
   html, body{
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    background: #000;
-    color: var(--textColor);
-    font-family: 'Saira', sans-serif;
-    position: relative;
     left: 1%;
   }
 
   #canvas {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
   }
   
-  .visualizer-content {
+  #out {
     position: absolute;
-    left: 30%;
     width: 100%;
     height: 100%;
-    display: none;
+    left: 50%;
+    top: 0;
   }
 
   .pre-check {
@@ -122,17 +147,19 @@ audio.active{
     width: 100%;
     z-index: 99;
   }
+  
+  .post-check {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 98;
+    display: none;
+  }
 
   .circle-btn {
-    font-weight: bolder;
-    display: block;
-    border-radius: 20px;
-    border: none;
-    background-color: #fff;
-    padding: 10px 50px;
     position: absolute;
-    left: 43%;
-    top: 43%;
+    left: 40%;
+    top: 45%;
   }
 
   .credits {
@@ -142,5 +169,10 @@ audio.active{
     bottom: 10px;
     left: 15px;
     z-index: 1;
+  }
+
+  .main-header {
+    top: 0;
+    right: 0;
   }
 }
