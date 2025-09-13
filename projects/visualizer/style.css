@@ -98,7 +98,7 @@ audio.active{
 }
 
 /* mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
 
   #canvas {
     position: absolute;
@@ -151,7 +151,7 @@ audio.active{
   }
 }
 /* PC */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
   html, body{
     left: 1%;
   }
