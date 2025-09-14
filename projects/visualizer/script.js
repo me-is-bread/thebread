@@ -59,20 +59,11 @@ _powerUp.onclick = function() {
         play_active = true;      
         _preCheckScreen.style.display = "none";
         _postCheckScreen.style.display = "block";
+        var OSCheck = (window.navigator.userAgent.indexOf("Android") != -1) ? introString.replace("<br />", "") : introString;
         typewriterEffect("typed", ["Portfolio"], 120);
         typewriterEffect("greetString", [greetString], 120);
         typewriterEffect("nameString", [nameString], 120);
-        typewriterEffect("introString", [introString], 60);
-        /*new Typed('#typed', {
-            strings: ['Portfolio'],
-            typeSpeed: 60,
-            cursorChar: '_'
-        });
-        new Typed('#typed-content', {
-            strings: "#content-text",
-            typeSpeed: 60,
-            cursorChar: '_'
-        });*/
+        typewriterEffect("introString", [OSCheck], 60);
     }
 }
 
